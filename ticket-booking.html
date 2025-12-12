@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор мест | Grand Theatre</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ticket-booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎭</text></svg>">
+</head>
+<body>
+    <!-- Шапка с навигацией -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-theater-masks"></i>
+                    <span>Grand Theatre</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#posters">Афиша</a></li>
+                    <li><a href="index.html#about">О театре</a></li>
+                    <li><a href="index.html#news">Новости</a></li>
+                    <li><a href="index.html#contacts">Контакты</a></li>
+                </ul>
+                <div class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Хлебные крошки -->
+    <section class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs-links">
+                <a href="index.html">Главная</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="index.html#posters">Афиша</a>
+                <i class="fas fa-chevron-right"></i>
+                <span id="breadcrumbs-title">Выбор мест</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <main class="booking-main">
+        <div class="container">
+            <div class="booking-container">
+                <!-- Информация о спектакле -->
+                <div class="booking-info">
+                    <div class="booking-header">
+                        <div class="booking-genre" id="booking-genre">Драма</div>
+                        <h1 class="booking-title" id="booking-title">Гамлет</h1>
+                        <div class="booking-subtitle" id="booking-subtitle">Трагическая история датского принца</div>
+                    </div>
+                    
+                    <div class="booking-details">
+                        <div class="detail-item">
+                            <i class="far fa-calendar-alt"></i>
+                            <div>
+                                <h4>Дата и время</h4>
+                                <p id="selectedDate">25 октября, 19:00</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="far fa-clock"></i>
+                            <div>
+                                <h4>Продолжительность</h4>
+                                <p id="playDuration">3 ч. 20 мин.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-theater-masks"></i>
+                            <div>
+                                <h4>Зал</h4>
+                                <p id="selectedHall">Большой зал</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-user-friends"></i>
+                            <div>
+                                <h4>Возрастное ограничение</h4>
+                                <p id="playAge">16+</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="price-info">
+                        <h3>Цены на билеты</h3>
+                        <div class="price-categories">
+                            <div class="price-category">
+                                <div class="price-color" style="background-color: #c9a959;"></div>
+                                <div class="price-desc">Партер (центральные)</div>
+                                <div class="price-value">1500 ₽</div>
+                            </div>
+                            <div class="price-category">
+                                <div class="price-color" style="background-color: #9e8a4a;"></div>
+                                <div class="price-desc">Партер (боковые)</div>
+                                <div class="price-value">1300 ₽</div>
+                            </div>
+                            <div class="price-category">
+                                <div class="price-color" style="background-color: #7a6c3b;"></div>
+                                <div class="price-desc">Бельэтаж</div>
+                                <div class="price-value">1200 ₽</div>
+                            </div>
+                            <div class="price-category">
+                                <div class="price-color" style="background-color: #5d522d;"></div>
+                                <div class="price-desc">Балкон</div>
+                                <div class="price-value">1000 ₽</div>
+                            </div>
+                            <div class="price-category">
+                                <div class="price-color" style="background-color: #3a341c;"></div>
+                                <div class="price-desc">Ложа</div>
+                                <div class="price-value">2500 ₽</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="legend">
+                        <h3>Легенда</h3>
+                        <div class="legend-items">
+                            <div class="legend-item">
+                                <div class="seat-sample available"></div>
+                                <span>Свободно</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="seat-sample selected"></div>
+                                <span>Выбрано</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="seat-sample occupied"></div>
+                                <span>Занято</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="seat-sample vip"></div>
+                                <span>VIP места</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Схема зала -->
+                <div class="booking-seats">
+                    <div class="seats-header">
+                        <h2>Выбор мест</h2>
+                        <div class="seats-counter">
+                            <span>Выбрано мест: </span>
+                            <span id="selectedSeatsCount">0</span>
+                            <span id="selectedSeatsSum"> | Сумма: 0 ₽</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Выбор даты и зала -->
+                    <div class="selection-options">
+                        <div class="option-group">
+                            <label for="dateSelect"><i class="far fa-calendar-alt"></i> Выберите дату:</label>
+                            <select id="dateSelect" class="custom-select">
+                                <option value="25-10-19:00">25 октября, 19:00 - Большой зал</option>
+                                <option value="26-10-19:30">26 октября, 19:30 - Большой зал</option>
+                                <option value="28-10-18:00">28 октября, 18:00 - Большой зал</option>
+                                <option value="30-10-19:30">30 октября, 19:30 - Малый зал</option>
+                                <option value="01-11-20:00">1 ноября, 20:00 - Камерная сцена</option>
+                            </select>
+                        </div>
+                        
+                        <div class="option-group">
+                            <label for="hallSelect"><i class="fas fa-theater-masks"></i> Выберите зал:</label>
+                            <div class="hall-buttons">
+                                <button class="hall-btn active" data-hall="big">Большой зал</button>
+                                <button class="hall-btn" data-hall="small">Малый зал</button>
+                                <button class="hall-btn" data-hall="chamber">Камерная сцена</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Сцена -->
+                    <div class="stage">
+                        <div class="stage-content">
+                            <i class="fas fa-star"></i>
+                            <span>СЦЕНА</span>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Схема зала -->
+                    <div class="seats-container">
+                        <!-- Большой зал -->
+                        <div class="hall-layout big-hall active">
+                            <!-- Ложи -->
+                            <div class="loge-section">
+                                <div class="loge-row">
+                                    <div class="seat loge available" data-price="2500" data-row="Ложа 1" data-seat="1">1</div>
+                                    <div class="seat loge available" data-price="2500" data-row="Ложа 1" data-seat="2">2</div>
+                                    <div class="seat loge occupied" data-price="2500" data-row="Ложа 1" data-seat="3">3</div>
+                                    <div class="seat loge available" data-price="2500" data-row="Ложа 1" data-seat="4">4</div>
+                                </div>
+                                <div class="loge-row">
+                                    <div class="seat loge available" data-price="2500" data-row="Ложа 2" data-seat="1">1</div>
+                                    <div class="seat loge occupied" data-price="2500" data-row="Ложа 2" data-seat="2">2</div>
+                                    <div class="seat loge occupied" data-price="2500" data-row="Ложа 2" data-seat="3">3</div>
+                                    <div class="seat loge available" data-price="2500" data-row="Ложа 2" data-seat="4">4</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Балкон -->
+                            <div class="balcony-section">
+                                <div class="row-label">Балкон</div>
+                                <div class="seat-row">
+                                    <div class="seat balcony available" data-price="1000" data-row="Балкон" data-seat="1">1</div>
+                                    <div class="seat balcony available" data-price="1000" data-row="Балкон" data-seat="2">2</div>
+                                    <div class="seat balcony available" data-price="1000" data-row="Балкон" data-seat="3">3</div>
+                                    <div class="seat balcony occupied" data-price="1000" data-row="Балкон" data-seat="4">4</div>
+                                    <div class="seat balcony available" data-price="1000" data-row="Балкон" data-seat="5">5</div>
+                                    <div class="seat balcony available" data-price="1000" data-row="Балкон" data-seat="6">6</div>
+                                    <div class="seat balcony available" data-price="1000" data-row="Балкон" data-seat="7">7</div>
+                                    <div class="seat balcony occupied" data-price="1000" data-row="Балкон" data-seat="8">8</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Бельэтаж -->
+                            <div class="dress-circle-section">
+                                <div class="row-label">Бельэтаж</div>
+                                <div class="seat-row">
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="1">1</div>
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="2">2</div>
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="3">3</div>
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="4">4</div>
+                                    <div class="seat dress-circle occupied" data-price="1200" data-row="Бельэтаж" data-seat="5">5</div>
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="6">6</div>
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="7">7</div>
+                                    <div class="seat dress-circle occupied" data-price="1200" data-row="Бельэтаж" data-seat="8">8</div>
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="9">9</div>
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="10">10</div>
+                                </div>
+                                <div class="seat-row">
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="11">11</div>
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="12">12</div>
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="13">13</div>
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="14">14</div>
+                                    <div class="seat dress-circle occupied" data-price="1200" data-row="Бельэтаж" data-seat="15">15</div>
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="16">16</div>
+                                    <div class="seat dress-circle occupied" data-price="1200" data-row="Бельэтаж" data-seat="17">17</div>
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="18">18</div>
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="19">19</div>
+                                    <div class="seat dress-circle available" data-price="1200" data-row="Бельэтаж" data-seat="20">20</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Партер -->
+                            <div class="stalls-section">
+                                <div class="row-label">Партер</div>
+                                <div class="seat-row">
+                                    <div class="seat stalls vip available" data-price="1500" data-row="Партер" data-seat="1">1</div>
+                                    <div class="seat stalls vip occupied" data-price="1500" data-row="Партер" data-seat="2">2</div>
+                                    <div class="seat stalls vip available" data-price="1500" data-row="Партер" data-seat="3">3</div>
+                                    <div class="seat stalls vip available" data-price="1500" data-row="Партер" data-seat="4">4</div>
+                                    <div class="seat stalls vip occupied" data-price="1500" data-row="Партер" data-seat="5">5</div>
+                                    <div class="seat stalls vip available" data-price="1500" data-row="Партер" data-seat="6">6</div>
+                                    <div class="seat stalls vip available" data-price="1500" data-row="Партер" data-seat="7">7</div>
+                                    <div class="seat stalls vip occupied" data-price="1500" data-row="Партер" data-seat="8">8</div>
+                                </div>
+                                <div class="seat-row">
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="9">9</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="10">10</div>
+                                    <div class="seat stalls occupied" data-price="1300" data-row="Партер" data-seat="11">11</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="12">12</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="13">13</div>
+                                    <div class="seat stalls occupied" data-price="1300" data-row="Партер" data-seat="14">14</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="15">15</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="16">16</div>
+                                </div>
+                                <div class="seat-row">
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="17">17</div>
+                                    <div class="seat stalls occupied" data-price="1300" data-row="Партер" data-seat="18">18</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="19">19</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="20">20</div>
+                                    <div class="seat stalls occupied" data-price="1300" data-row="Партер" data-seat="21">21</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="22">22</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="23">23</div>
+                                    <div class="seat stalls occupied" data-price="1300" data-row="Партер" data-seat="24">24</div>
+                                </div>
+                                <div class="seat-row">
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="25">25</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="26">26</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="27">27</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="28">28</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="29">29</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="30">30</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="31">31</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="32">32</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Малый зал -->
+                        <div class="hall-layout small-hall">
+                            <!-- Схема малого зала (упрощенная) -->
+                            <div class="stalls-section">
+                                <div class="row-label">Партер</div>
+                                <div class="seat-row">
+                                    <div class="seat stalls vip available" data-price="1500" data-row="Партер" data-seat="1">1</div>
+                                    <div class="seat stalls vip available" data-price="1500" data-row="Партер" data-seat="2">2</div>
+                                    <div class="seat stalls vip occupied" data-price="1500" data-row="Партер" data-seat="3">3</div>
+                                    <div class="seat stalls vip available" data-price="1500" data-row="Партер" data-seat="4">4</div>
+                                </div>
+                                <div class="seat-row">
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="5">5</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="6">6</div>
+                                    <div class="seat stalls occupied" data-price="1300" data-row="Партер" data-seat="7">7</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="8">8</div>
+                                </div>
+                                <div class="seat-row">
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="9">9</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="10">10</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="11">11</div>
+                                    <div class="seat stalls available" data-price="1300" data-row="Партер" data-seat="12">12</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Камерная сцена -->
+                        <div class="hall-layout chamber-hall">
+                            <!-- Схема камерной сцены (упрощенная) -->
+                            <div class="stalls-section">
+                                <div class="row-label">Зал</div>
+                                <div class="seat-row">
+                                    <div class="seat stalls vip available" data-price="2000" data-row="Ряд 1" data-seat="1">1</div>
+                                    <div class="seat stalls vip available" data-price="2000" data-row="Ряд 1" data-seat="2">2</div>
+                                    <div class="seat stalls vip available" data-price="2000" data-row="Ряд 1" data-seat="3">3</div>
+                                    <div class="seat stalls vip occupied" data-price="2000" data-row="Ряд 1" data-seat="4">4</div>
+                                </div>
+                                <div class="seat-row">
+                                    <div class="seat stalls available" data-price="1800" data-row="Ряд 2" data-seat="1">1</div>
+                                    <div class="seat stalls available" data-price="1800" data-row="Ряд 2" data-seat="2">2</div>
+                                    <div class="seat stalls occupied" data-price="1800" data-row="Ряд 2" data-seat="3">3</div>
+                                    <div class="seat stalls available" data-price="1800" data-row="Ряд 2" data-seat="4">4</div>
+                                </div>
+                                <div class="seat-row">
+                                    <div class="seat stalls available" data-price="1600" data-row="Ряд 3" data-seat="1">1</div>
+                                    <div class="seat stalls available" data-price="1600" data-row="Ряд 3" data-seat="2">2</div>
+                                    <div class="seat stalls available" data-price="1600" data-row="Ряд 3" data-seat="3">3</div>
+                                    <div class="seat stalls available" data-price="1600" data-row="Ряд 3" data-seat="4">4</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Выбранные места -->
+                    <div class="selected-seats-info">
+                        <h3>Выбранные места</h3>
+                        <div id="selectedSeatsList" class="selected-seats-list">
+                            <p class="empty-seats">Места не выбраны</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Итого и кнопка оплаты -->
+                    <div class="booking-summary">
+                        <div class="summary-total">
+                            <div class="total-info">
+                                <div class="total-label">Итого:</div>
+                                <div class="total-amount" id="totalAmount">0 ₽</div>
+                            </div>
+                            <div class="total-details" id="totalDetails">
+                                Выберите места для расчета стоимости
+                            </div>
+                        </div>
+                        
+                        <div class="summary-actions">
+                            <button class="btn-secondary" id="clearSelection">
+                                <i class="fas fa-times"></i> Очистить выбор
+                            </button>
+                            <button class="btn-primary" id="proceedToPayment" disabled>
+                                <i class="fas fa-shopping-cart"></i> Перейти к оплате
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer" id="contacts">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="logo">
+                        <i class="fas fa-theater-masks"></i>
+                        <span>Grand Theatre</span>
+                    </div>
+                    <p class="footer-text">Театр с богатой историей и современным подходом к искусству. Мы создаем незабываемые театральные впечатления.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-contacts">
+                    <h3 class="footer-title">Контакты</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>ул. Театральная, д. 1, Москва</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@grandtheatre.ru</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Касса: 10:00 - 21:00 ежедневно</span>
+                    </div>
+                </div>
+                
+                <div class="footer-subscribe">
+                    <h3 class="footer-title">Подписка на афишу</h3>
+                    <p>Получайте уведомления о новых спектаклях и специальных предложениях</p>
+                    <form class="subscribe-form" id="subscribeForm">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn-secondary">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Grand Theatre. Все права защищены.</p>
+                <p>Страница для выбора мест в театре</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно подтверждения -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content modal-confirmation">
+            <div class="modal-close" id="confirmationModalClose">&times;</div>
+            <div class="modal-body">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2 class="confirmation-title">Билеты успешно забронированы!</h2>
+                <div class="confirmation-details" id="confirmationDetails">
+                    <!-- Детали бронирования будут вставлены через JavaScript -->
+                </div>
+                <div class="confirmation-actions">
+                    <button class="btn-secondary" id="closeConfirmation">
+                        Закрыть
+                    </button>
+                    <button class="btn-primary" id="printTickets">
+                        <i class="fas fa-print"></i> Распечатать билеты
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="ticket-booking.js"></script>
+</body>
+</html>

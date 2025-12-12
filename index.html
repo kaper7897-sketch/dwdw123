@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Театральная афиша | Grand Theatre</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎭</text></svg>">
+</head>
+<body>
+    <!-- Шапка с навигацией -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-theater-masks"></i>
+                    <span>Grand Theatre</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#posters">Афиша</a></li>
+                    <li><a href="#about">О театре</a></li>
+                    <li><a href="#news">Новости</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+                <div class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный баннер -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Театральная афиша</h1>
+                <p class="hero-subtitle">Современные постановки и классические спектакли в самом сердце города</p>
+                <a href="#posters" class="btn-primary">Смотреть афишу</a>
+            </div>
+            <div class="hero-mask">
+                <i class="fas fa-mask"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основная афиша -->
+    <section class="posters-section" id="posters">
+        <div class="container">
+            <h2 class="section-title">Текущие постановки</h2>
+            <p class="section-subtitle">Выберите спектакль и забронируйте билеты онлайн</p>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="drama">Драма</button>
+                <button class="filter-btn" data-filter="comedy">Комедия</button>
+                <button class="filter-btn" data-filter="classic">Классика</button>
+                <button class="filter-btn" data-filter="modern">Современное</button>
+            </div>
+            
+            <div class="posters-grid" id="postersGrid">
+                <!-- Постеры будут загружены через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок о театре -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">О театре</h2>
+                    <p>Grand Theatre — один из старейших и самых уважаемых театров страны, основанный в 1895 году. Наша история насчитывает более 125 лет великолепных постановок, выдающихся актеров и незабываемых моментов на сцене.</p>
+                    <p>В нашем репертуаре гармонично сочетаются классические произведения и современные пьесы, что позволяет нам быть интересными как ценителям традиционного театра, так и поклонникам новых форм сценического искусства.</p>
+                    <p>Мы гордимся тем, что сохраняем лучшие театральные традиции, при этом постоянно развиваясь и внедряя инновационные подходы к постановкам.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">125+</span>
+                            <span class="stat-text">лет истории</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">40+</span>
+                            <span class="stat-text">спектаклей в репертуаре</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">300+</span>
+                            <span class="stat-text">представлений в год</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="grand.jpg" alt="Интерьер театра">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Новости -->
+    <section class="news-section" id="news">
+        <div class="container">
+            <h2 class="section-title">Новости театра</h2>
+            <p class="section-subtitle">Следите за последними событиями и премьерами</p>
+            
+            <div class="news-grid">
+                <div class="news-card" data-id="1">
+                    <div class="news-date">
+                        <span class="day">15</span>
+                        <span class="month">Окт</span>
+                    </div>
+                    <h3 class="news-title">Новая постановка "Гамлета"</h3>
+                    <p class="news-excerpt">В этом сезоне мы представляем совершенно новую интерпретацию шекспировского "Гамлета" от режиссера-лауреата международных премий.</p>
+                    <a href="#" class="news-link news-details-btn" data-id="1">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="news-card" data-id="2">
+                    <div class="news-date">
+                        <span class="day">22</span>
+                        <span class="month">Окт</span>
+                    </div>
+                    <h3 class="news-title">Экскурсии за кулисы</h3>
+                    <p class="news-excerpt">С этого месяца мы запускаем уникальные экскурсии за кулисы театра. Узнайте, как создаются спектакли изнутри.</p>
+                    <a href="#" class="news-link news-details-btn" data-id="2">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="news-card" data-id="3">
+                    <div class="news-date">
+                        <span class="day">05</span>
+                        <span class="month">Ноя</span>
+                    </div>
+                    <h3 class="news-title">Фестиваль современной драмы</h3>
+                    <p class="news-excerpt">В ноябре состоится ежегодный фестиваль современной драмы, где будут представлены работы молодых драматургов.</p>
+                    <a href="#" class="news-link news-details-btn" data-id="3">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer" id="contacts">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="logo">
+                        <i class="fas fa-theater-masks"></i>
+                        <span>Grand Theatre</span>
+                    </div>
+                    <p class="footer-text">Театр с богатой историей и современным подходом к искусству. Мы создаем незабываемые театральные впечатления.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-contacts">
+                    <h3 class="footer-title">Контакты</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>ул. Театральная, д. 1, Москва</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@grandtheatre.ru</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Касса: 10:00 - 21:00 ежедневно</span>
+                    </div>
+                </div>
+                
+                <div class="footer-subscribe">
+                    <h3 class="footer-title">Подписка на афишу</h3>
+                    <p>Получайте уведомления о новых спектаклях и специальных предложениях</p>
+                    <form class="subscribe-form" id="subscribeForm">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn-secondary">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Grand Theatre. Все права защищены.</p>
+                <p>Сайт создан для демонстрации театральной афиши</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для деталей спектакля -->
+    <div class="modal" id="playModal">
+        <div class="modal-content modal-play-content">
+            <div class="modal-close" id="playModalClose">&times;</div>
+            <div class="modal-body" id="playModalBody">
+                <!-- Контент будет загружен через JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для новостей -->
+    <div class="modal" id="newsModal">
+        <div class="modal-content modal-news-content">
+            <div class="modal-close" id="newsModalClose">&times;</div>
+            <div class="modal-body" id="newsModalBody">
+                <!-- Контент будет загружен через JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
